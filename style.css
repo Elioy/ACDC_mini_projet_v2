@@ -1,0 +1,37 @@
+node.etat0{
+	size: 35;
+	fill-color: white;
+	stroke-mode: plain;
+	stroke-color: black;
+	stroke-width:4; 
+}
+
+node.etat{
+	size: 35;
+	fill-color: white;
+	stroke-mode: plain;
+	stroke-color: green;
+	stroke-width:4; 
+}
+
+node.transition{
+	fill-color: white;
+	stroke-mode: plain;
+	stroke-color: black;
+	stroke-width:4; 
+	size: 35, 0;
+}
+
+edge{
+ arrow-shape: arrow; 
+}
+
+sprite{
+	fill-color: white;
+	stroke-mode: plain;
+	stroke-color: white;
+}
+
+sprite.dependance{
+	text-color: red;
+}

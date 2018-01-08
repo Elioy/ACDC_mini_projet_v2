@@ -1,0 +1,161 @@
+services :
+    - &s1
+      nom : service 1
+      etats :
+          - &s1e1
+            nom : s1e1
+            token : 0
+          - &s1e2
+            nom : s1e2
+            token : 1
+          - &s1e3
+            nom : s1e3
+            token : 0
+          - &s1e4
+            nom : s1e4
+            token : 0
+          - &s1e5
+            nom : s1e5
+            token : 0
+      transitions :
+          - &s1t1
+            nom : s1t1
+            duree : 4000
+            parents :
+                  - *s1e1
+            enfants :
+                  - *s1e2
+          - &s1t2
+            nom : s1t2
+            duree : 3000
+            parents :
+                  - *s1e2
+            enfants :
+                  - *s1e3
+          - &s1t3
+            nom : s1t3
+            duree : 1500
+            parents : 
+                  - *s1e2
+            enfants:
+                  - *s1e4
+          - &s1t4
+            nom : s1t4
+            duree : 4000
+            parents : 
+                  - *s1e3
+                  - *s1e4
+            enfants :
+                  - *s1e5
+    - &s2
+      nom : service 2
+      etats :
+          - &s2e1
+            nom : s2e1
+            token : 1
+          - &s2e2
+            nom : s2e2
+            token : 0
+          - &s2e3
+            nom : s2e3
+            token : 0
+          - &s2e4
+            nom : s2e4
+            token : 0
+          - &s2e5
+            nom : s2e5
+            token : 0
+      transitions :
+          - &s2t1 
+            nom : s2t1
+            duree : 4000
+            parents :
+                - *s2e1
+            enfants :
+                - *s2e2
+          - &s2t2 
+            duree : 4000
+            nom : s2t2
+            parents :
+                - *s2e2
+            enfants :
+                - *s2e3
+          - &s2t3 
+            duree : 4000
+            nom : s2t3
+            parents : 
+                - *s2e2 
+            enfants :
+                - *s2e4
+          - &s2t4 
+            duree : 4000
+            nom : s2t4
+            parents :
+                - *s2e4
+            enfants :
+                - *s2e5
+    - &s3
+      nom : service 3
+      etats :
+          - &s3e1
+            nom : s3e1
+            token : 1
+          - &s3e2
+            nom : s3e2
+            token : 0
+          - &s3e3
+            nom : s3e3
+            token : 0
+          - &s3e4
+            nom : s3e4
+            token : 0
+          - &s3e5
+            nom : s3e5
+            token : 0
+          - &s3e6
+            nom : s3e6
+            token : 0    
+      transitions :
+          - &s3t1 
+            nom : s3t1
+            duree : 4000
+            parents :
+                - *s3e1
+            enfants :
+                - *s3e2
+          - &s3t2 
+            nom : s3t2
+            duree : 4000
+            parents :
+                - *s3e2
+            enfants :
+                - *s3e3
+          - &s3t3 
+            nom : s3t3
+            duree : 4000
+            parents :
+                - *s3e2
+            enfants :
+                - *s3e4
+          - &s3t4
+            nom : s3t4
+            duree : 4000
+            parents :
+                - *s3e2
+            enfants :
+                - *s3e5
+          - &s3t5 
+            nom : s3t5
+            duree : 4000
+            parents :
+                - *s3e4
+                - *s3e5
+            enfants :
+                - *s3e6
+dependancesExternes :
+    - pere : *s1e4
+      fils : *s2t2
+    - pere : *s2e4
+      fils : *s3t1
+    - pere : *s2e5
+      fils : *s3t5
