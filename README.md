@@ -20,6 +20,13 @@ Chacun d’entre vous va utiliser le code de la phase 1 d’un autre pour implé
 2, donc bien évidemment il faut faire en sorte de donner un code propre, bien structuré et bien
 commenté à votre camarade de classe.
 
+## Indications
+* Sélectionner le fichier d'entrée dans l'explorateur
+* Cliquer sur "Lancer" pour lancer la simulation
+* les états en vert sont les états validés
+* le texte en noir, à droite des transitions correspond au nom de l'état ou de la transition
+* le texte en rouge à droite de certaines transitions correspond à sa dépendance
+
 ## Outils
 **IDE :** [Netbeans 8.2](https://netbeans.org/downloads/)
 
@@ -32,7 +39,7 @@ commenté à votre camarade de classe.
 ## Diagramme de Classe
 
 ## Documentation
-La javadoc du projet est accessible [ici]()
+La javadoc du projet est accessible [ici]( https://elioy.github.io/ACDC_mini_projet_v2/)
 
 ## Exemple de fichier d'entrée
     services :
