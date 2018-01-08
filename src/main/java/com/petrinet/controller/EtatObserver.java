@@ -24,11 +24,27 @@ import org.graphstream.graph.Node;
  */
 public class EtatObserver implements Observer {
 
+    /**
+     * l'etat observé
+     */
     private Etat etat;
+    /**
+     * le graphe
+     */
     private Graph graphe;
+    
+    /**
+     * le petri parser
+     */
     private PetriParser parser;
 
-    public EtatObserver(Etat etat, Graph graphe, PetriFrame pf, PetriParser parser) {
+    /**
+     * Constructeur
+     * @param etat
+     * @param graphe
+     * @param parser 
+     */
+    public EtatObserver(Etat etat, Graph graphe, PetriParser parser) {
         this.etat = etat;
         this.graphe = graphe;
         this.parser = parser;

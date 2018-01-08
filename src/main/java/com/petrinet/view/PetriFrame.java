@@ -123,7 +123,7 @@ public class PetriFrame extends JFrame {
                 n.removeAttribute("ui.class");
                 n.addAttribute("ui.class", "etat");
             }
-            EtatObserver eo = new EtatObserver(e, g, this, parser);
+            EtatObserver eo = new EtatObserver(e, g, parser);
             e.addObserver(eo);
         }
     }

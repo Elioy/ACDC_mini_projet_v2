@@ -15,9 +15,21 @@ import javax.swing.JButton;
  * @author eliot
  */
 public class BoutonListener implements ActionListener{
+    /**
+     * le bouton de l'écouteur
+     */
     private JButton bouton;
+    
+    /**
+     * le petri parser
+     */
     private PetriParser parser;
 
+    /**
+     * constructeur
+     * @param bouton
+     * @param parser 
+     */
     public BoutonListener(JButton bouton, PetriParser parser){
         this.bouton = bouton;
         this.parser = parser;
