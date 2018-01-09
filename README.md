@@ -36,8 +36,6 @@ commenté à votre camarade de classe.
 
 **Affichage des graphes :** [GraphStream](http://graphstream-project.org/)
 
-## Diagramme de Classe
-
 ## Documentation
 La javadoc du projet est accessible [ici]( https://elioy.github.io/ACDC_mini_projet_v2/)
 
